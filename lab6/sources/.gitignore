@@ -24,3 +24,5 @@
 hs_err_pid*
 replay_pid*
 # = = = = = = = = end Java.gitignore
+
+**/target/classes/**/*.fxml
