@@ -13,9 +13,9 @@ public class HelloController {
         status.setText("Старт онлайн игры...");
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("game-view.fxml"));
-            Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+            Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
-            stage.setTitle("Hello!");
+            stage.setTitle("Игра с ботом | Крестики и нолики");
             stage.setScene(scene);
             stage.show();
         }
