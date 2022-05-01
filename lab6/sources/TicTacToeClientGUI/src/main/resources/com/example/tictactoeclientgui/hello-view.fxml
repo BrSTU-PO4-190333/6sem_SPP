@@ -14,7 +14,8 @@
       <font>
          <Font name="System Bold" size="18.0" />
       </font></Label>
-   <Button mnemonicParsing="false" onAction="#onStartOnlineGameClick" prefWidth="300.0" text="Игра с ботом" />
+   <Button mnemonicParsing="false" onAction="#onSingleplayerClick" prefWidth="300.0" text="Одиночная игра (с ботом)" />
+   <Button mnemonicParsing="false" onAction="#onMultiplayerClick" prefWidth="300.0" text="Сетевая игра" />
    <Button mnemonicParsing="false" onAction="#onExitClick" prefWidth="300.0" text="Выход" />
    <Label fx:id="status" text="..." textFill="#e1e1e1" />
 </VBox>
