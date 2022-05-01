@@ -15,7 +15,7 @@ public class HelloController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("game-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
-            stage.setTitle("Игра с ботом | Крестики и нолики");
+            stage.setTitle("Игра с ботом | Крестики-нолики");
             stage.setScene(scene);
             stage.show();
         }

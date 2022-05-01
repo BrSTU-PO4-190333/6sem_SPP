@@ -8,7 +8,7 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tictactoeclientgui.GameController">
    <HBox alignment="TOP_CENTER">
-      <Label text="КРЕСТИКИ И НОЛИКИ" textFill="#ffa400">
+      <Label text="КРЕСТИКИ-НОЛИКИ" textFill="#ffa400">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Label>

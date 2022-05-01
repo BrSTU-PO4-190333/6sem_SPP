@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Меню | Крестики и нолики");
+        stage.setTitle("Меню | Крестики-нолики");
         stage.setScene(scene);
         stage.show();
     }
