@@ -1,0 +1,97 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{hyperref}
+\usepackage{_env/gpi_global.env}
+\usepackage{_env/gpi_report.env}
+\usepackage{_sty/gpi_lst}
+\usepackage{_sty/gpi_toc}
+\usepackage{_sty/gpi_t}
+\usepackage{_sty/gpi_p}
+\usepackage{_sty/gpi_u}
+
+% Код
+% \ESKDletter{О}{Л}{Р}
+% \def \gpiDocTypeNum {81}
+% \def \gpiDocVer {00}
+% \def \gpiCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\gpiStudentGroupName\gpiStudentGroupNum.\gpiStudentCard-0\gpiDocNum~\gpiDocTypeNum~\gpiDocVer}
+
+\def \gpiDocTopic {Отчёт лабораторной работы №\gpiDocNum}
+
+% Графа 1 (наименование изделия/документа)
+% \ESKDcolumnI {\ESKDfontII \gpiTopic \\ \gpiDocTopic}
+
+% Графа 2 (обозначение документа)
+% \ESKDsignature {\gpiCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+% \ESKDcolumnIX {\gpiDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+% \ESKDcolumnXIfI {\gpiStudentSurname}
+% \ESKDcolumnXIfII {\gpiTeacherSurname}
+% \ESKDcolumnXIfV {\gpiTeacherSurname}
+
+\begin{document}
+    \input{_tex/gpi_rep_titlePage.tex}
+    \ESKDstyle{empty}
+    \begin{center}
+        \textbf{\gpiDocTopic}
+    \end{center}
+
+    % = = = = = = = =
+    \paragraph{} \textbf{Тема}: <<\gpiTopicRep>>
+
+    \paragraph{} \textbf{Цель}:
+    приобрести практические навыки разработки баз данных и начальной интеграции БД с кодом Java с помощью JDBC.
+
+    \paragraph{} \textbf{Что нужно сделать}:
+
+    Реализовать базу данных из не менее 5 таблиц на заданную тематику.
+    При реализации продумать типизацию полей и внешние ключи в таблицах.
+    Визуализировать разработанную БД с помощью схемы, на которой отображены все таблицы и связи между ними.
+    На языке Java с использованием JDBC реализовать подключение к БД и выполнить основные типы запросов,
+    продемонстрировать результаты преподавателю и включить тексты составленных запросов в отчет.
+    Основные типы запросов:
+    \begin{enumerate}
+        \item[1.] На выборку/на выборку с упорядочиванием (SELECT);
+        \item[2.] На добавление (INSERT INTO);
+        \item[3.] На удаление (DELETE FROM);
+        \item[4.] На модификацию (UPDATE).
+    \end{enumerate}
+    
+    Базу данные можно реализовать в любой СУБД (MySQL, PostgreSQL, SQLite и др.)
+
+    \textbf{Вариант 5}: База данных <<Сборка компьютера>>.
+
+    % \paragraph{} \textbf{Разработка дизайна}:
+
+    % \begin{figure}[!h]
+    %     \centering
+    %     \includegraphics[]
+    %         {_assets/ClassDiagram.png}
+    %     \caption{Диграмма классов}
+    % \end{figure}
+
+    \paragraph{} \textbf{Исходный код}: 
+
+    \lstinputlisting[language=java, name=src/com/company/Main.java]
+    {../sources/6sem_SPP_lab3/src/com/company/Main.java}
+
+%     \begin{lstlisting}[caption=Вывод в консоль]
+%  Hello, World!
+% \end{lstlisting}
+
+    \paragraph{} \textbf{Вывод}: создали отчёт, используя \LaTeX.
+
+    % = = = = = = = =
+    \newpage
+    % \addcontentsline{toc}{section}{Список использованных источников}
+    % \section*{Список использованных источников}
+    \paragraph{} \textbf{Список использованных источников}
+    \begin{enumerate}
+        \item[1.] Releases · xerial/sqlite-jdbc [Электронный ресурс]
+        - Режим доступа: \url{https://github.com/xerial/sqlite-jdbc/releases}.
+        Дата~доступа:~02.05.2022.
+    \end{enumerate}
+    \newpage
+\end{document}
