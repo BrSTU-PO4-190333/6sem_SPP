@@ -67,30 +67,58 @@
     %     \caption{Диграмма классов}
     % \end{figure}
 
-    \paragraph{} \textbf{Исходный код}: 
+    % \paragraph{} \textbf{Исходный код}: 
+    
+    \paragraph{}\textbf{Исходники клиентского приложения:}
 
-    \begin{center}
-        \textbf{Клиент}
-    \end{center}
+    \begin{enumerate}
+        \item Main.java - основной класс вызывает графический класс MainFX
+        \item MainFX.java - вызывает графическое окно MainController
+        \item MainController.java - основное графическое окно
+        \item TicTacToeGameClass.java - класс с логикой игры
+        \item SinglePlayerController.java - окно игры с ботов
+        \item MultiPlayerController.java - окно сетевой игры
+        \item main-view.fxml - дизайн основного окна
+        \item single-player-view.fxml - дизайн игры с ботом
+        \item multi-player-view.fxml - дизайн сетевой игры
+    \end{enumerate}
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/Main_1.java]
-    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/Main_1.java}
-    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/HelloApplication.java]
-    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/HelloApplication.java}
-    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/HelloController.java]
-    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/HelloController.java}
-    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/TicTacToeGame.java]
-    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/TicTacToeGame.java}
-    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/GameController.java]
-    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/GameController.java}
-    \lstinputlisting[language=xml, name=src/main/resources/com/example/tictactoeclientgui/hello-view.fxml]
-    {../sources/TicTacToeClientGUI/src/main/resources/com/example/tictactoeclientgui/hello-view.fxml}
-    \lstinputlisting[language=xml, name=src/main/resources/com/example/tictactoeclientgui/game-view.fxml]
-    {../sources/TicTacToeClientGUI/src/main/resources/com/example/tictactoeclientgui/game-view.fxml}
+    \paragraph{}\textbf{Исходники серверного приложения:}
 
-    \begin{center}
-        \textbf{Сервер}
-    \end{center}
+    \begin{enumerate}
+        \item Main.java - основной класс с логикой сервера
+    \end{enumerate}
+
+    \paragraph{}\textbf{Исходники клиентского приложения:}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/Main.java]
+    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/Main.java}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/MainFX.java]
+    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/MainFX.java}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/MainController.java]
+    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/MainController.java}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/TicTacToeGameClass.java]
+    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/TicTacToeGameClass.java}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/SinglePlayerController.java]
+    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/SinglePlayerController.java}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/tictactoeclientgui/MultiPlayerController.java]
+    {../sources/TicTacToeClientGUI/src/main/java/com/example/tictactoeclientgui/MultiPlayerController.java}
+
+    \lstinputlisting[language=xml, name=src/main/resources/com/example/tictactoeclientgui/main-view.fxml]
+    {../sources/TicTacToeClientGUI/src/main/resources/com/example/tictactoeclientgui/main-view.fxml}
+
+    \lstinputlisting[language=xml, name=src/main/resources/com/example/tictactoeclientgui/single-player-view.fxml]
+    {../sources/TicTacToeClientGUI/src/main/resources/com/example/tictactoeclientgui/single-player-view.fxml}
+
+    \lstinputlisting[language=xml, name=src/main/resources/com/example/tictactoeclientgui/multi-player-view.fxml]
+    {../sources/TicTacToeClientGUI/src/main/resources/com/example/tictactoeclientgui/multi-player-view.fxml}
+
+    \paragraph{}\textbf{Исходники серверного приложения:}
 
     \lstinputlisting[language=java, name=src/com/company/Main.java]
     {../sources/TicTacToeServer/src/com/company/Main.java}
