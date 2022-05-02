@@ -1,6 +1,6 @@
 package com.example.tictactoeclientgui;
 
-public class TicTacToeGame {
+public class TicTacToeGameClass {
     // Перечисления состояний ячейки
     protected enum GameField {
         empty,  // Пустая яцейка
@@ -16,7 +16,7 @@ public class TicTacToeGame {
     };
 
     // Конструктор
-    public TicTacToeGame() {
+    public TicTacToeGameClass() {
         reset(); // Обнуляем игровое поле
     }
 

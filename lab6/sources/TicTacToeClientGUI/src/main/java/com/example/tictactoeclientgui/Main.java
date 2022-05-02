@@ -1,7 +1,7 @@
 package com.example.tictactoeclientgui;
 
-public class Main_1 {
+public class Main {
     public static void main(String [] args) {
-        HelloApplication.main(args);
+        MainFX.main(args);
     }
 }

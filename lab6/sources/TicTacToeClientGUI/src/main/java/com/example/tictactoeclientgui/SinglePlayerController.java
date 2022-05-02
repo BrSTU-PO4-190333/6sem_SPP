@@ -9,8 +9,8 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
 
-public class GameController {
-    TicTacToeGame game = new TicTacToeGame(); // Класс с игровой логикой
+public class SinglePlayerController {
+    TicTacToeGameClass game = new TicTacToeGameClass(); // Класс с игровой логикой
 
     // Кнопки
     @FXML protected Button button_0;
