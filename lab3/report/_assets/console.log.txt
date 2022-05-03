@@ -1,0 +1,143 @@
+Success connect to database
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+2
+
+ = = = = = = = =
+ Table - RB_Nomenclature
+| #        | Name                                                             | 
+| -------- | ---------------------------------------------------------------- | 
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+1
+
+ = = = = = = = =
+Create nomenclature element
+Name: red mouse
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+1
+
+ = = = = = = = =
+Create nomenclature element
+Name: grey mouse
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+2
+
+ = = = = = = = =
+ Table - RB_Nomenclature
+| #        | Name                                                             | 
+| -------- | ---------------------------------------------------------------- | 
+|        1 | red mouse                                                        | 
+|        2 | grey mouse                                                       | 
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+3
+
+ = = = = = = = =
+Update nomenclature element
+id: 1
+Name: black mouse
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+2
+
+ = = = = = = = =
+ Table - RB_Nomenclature
+| #        | Name                                                             | 
+| -------- | ---------------------------------------------------------------- | 
+|        1 | black mouse                                                      | 
+|        2 | grey mouse                                                       | 
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+4
+
+ = = = = = = = =
+Delete nomenclature element
+id: 1
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+2
+
+ = = = = = = = =
+ Table - RB_Nomenclature
+| #        | Name                                                             | 
+| -------- | ---------------------------------------------------------------- | 
+|        2 | grey mouse                                                       | 
+Press any key... 
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit
+
+0
+
+Process finished with exit code 0

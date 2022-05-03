@@ -63,14 +63,14 @@
 
     \textbf{Вариант 5}: База данных <<Сборка компьютера>>.
 
-    % \paragraph{} \textbf{Разработка дизайна}:
+    \paragraph{} \textbf{Проектирование базы данных}:
 
-    % \begin{figure}[!h]
-    %     \centering
-    %     \includegraphics[]
-    %         {_assets/ClassDiagram.png}
-    %     \caption{Диграмма классов}
-    % \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=16cm]
+            {../sources/database/ФМ.png}
+        \caption{Логическая модель базы данных}
+    \end{figure}
 
     \paragraph{} \textbf{Исходный код}: 
 
@@ -90,23 +90,26 @@
     \lstinputlisting[language=java, name=src/com/company/RB_Nomenclature.java]
     {../sources/6sem_SPP_lab3/src/com/company/RB_Nomenclature.java}
 
-    \begin{lstlisting}[name=Вывод в консоль]
-    Success connect to database
-    Table - RB_Nomenclature
-   | #        | Name                                                             | 
-   | -------- | ---------------------------------------------------------------- | 
-   |        1 | red mouse                                                        | 
-   |        2 | green mouse                                                      | 
-    Table - RB_Nomenclature
-   | #        | Name                                                             | 
-   | -------- | ---------------------------------------------------------------- | 
-   |        1 | grey mouse                                                       |
-\end{lstlisting}
+    \lstinputlisting[name=Вывод в консоль]
+    {_assets/console.log.txt}
 
-    \paragraph{} \textbf{Вывод}: создали отчёт, используя \LaTeX.
+%     \begin{lstlisting}[name=Вывод в консоль]
+%     ...                                                      |
+% \end{lstlisting}
 
+    \paragraph{} \textbf{Вывод}:
+    
+    Спроектировали базу данных из 6 таблиц.
+
+    Подключились к базе данных SQLite через код java, используя DriverManager.
+
+    Реализовали операции создания и удаления таблицы.
+
+    Реализовали операции CRUD: c - create, r - read, u - update, d - delete.
+    Создания, чтение, обновления, удаления.
+    
     % = = = = = = = =
-    \newpage
+    % \newpage
     % \addcontentsline{toc}{section}{Список использованных источников}
     % \section*{Список использованных источников}
     \paragraph{} \textbf{Список использованных источников}
