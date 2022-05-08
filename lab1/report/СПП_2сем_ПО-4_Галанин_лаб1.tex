@@ -1,0 +1,105 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{hyperref}
+\usepackage{_env/gpi_global.env}
+\usepackage{_env/gpi_report.env}
+\usepackage{_sty/gpi_lst}
+\usepackage{_sty/gpi_toc}
+\usepackage{_sty/gpi_t}
+\usepackage{_sty/gpi_p}
+\usepackage{_sty/gpi_u}
+
+% Код
+% \ESKDletter{О}{Л}{Р}
+% \def \gpiDocTypeNum {81}
+% \def \gpiDocVer {00}
+% \def \gpiCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\gpiStudentGroupName\gpiStudentGroupNum.\gpiStudentCard-0\gpiDocNum~\gpiDocTypeNum~\gpiDocVer}
+
+\def \gpiDocTopic {Отчёт лабораторной работы №\gpiDocNum}
+
+% Графа 1 (наименование изделия/документа)
+% \ESKDcolumnI {\ESKDfontII \gpiTopic \\ \gpiDocTopic}
+
+% Графа 2 (обозначение документа)
+% \ESKDsignature {\gpiCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+% \ESKDcolumnIX {\gpiDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+% \ESKDcolumnXIfI {\gpiStudentSurname}
+% \ESKDcolumnXIfII {\gpiTeacherSurname}
+% \ESKDcolumnXIfV {\gpiTeacherSurname}
+
+\begin{document}
+    \input{_tex/gpi_rep_titlePage.tex}
+    \ESKDstyle{empty}
+    \begin{center}
+        \textbf{\gpiDocTopic}
+    \end{center}
+
+    % = = = = = = = =
+    \paragraph{} \textbf{Тема}: <<\gpiTopicRep>>
+
+    \paragraph{} \textbf{Цель}:
+    приобрести навыки написания простого оконного многопоточного приложения с использованием Java API.
+
+    \paragraph{} \textbf{Что нужно сделать}:
+
+    Разработать консольное приложение с двумя потоками (1 - основной поток; 2 - поток, в котором производится вычисление).
+
+    \textbf{Вариант 5}:
+    $\sum\limits_{k=1}^n {1 \over (2k-1) (2k + 1)} = {1 \over 1 * 3} + {1 \over 3 * 5} + ... + {1 \over (2n-1) (2n + 1)}$
+
+    % \paragraph{} \textbf{Разработка дизайна}:
+
+    % \begin{figure}[!h]
+    %     \centering
+    %     \includegraphics[]
+    %         {_assets/ClassDiagram.png}
+    %     \caption{Диграмма классов}
+    % \end{figure}
+
+    \paragraph{} \textbf{Исходный код}: 
+
+    \lstinputlisting[language=java, name=src/com/company/Main.java]
+    {../sources/SPP_2sem_PO4_Galanin_lab1/src/com/company/Main.java}
+
+    \lstinputlisting[language=java, name=src/com/company/MyThread.java]
+    {../sources/SPP_2sem_PO4_Galanin_lab1/src/com/company/MyThread.java}
+
+    \begin{lstlisting}[caption=Вывод в консоль]
+Main thread created
+Child thread created
+n = 1000
+sum = 0.49974987493746836
+Child thread finished
+Main thread finished
+\end{lstlisting}
+
+    \paragraph{} \textbf{Вывод}:
+    Реализовали класс - поток (наследовали Thread).
+    Реализовал вычисление в отдельном потоке (переопределили метод run, а вызывали, используя метод start).
+    Присоединил поток к основному потоку, используя метод join, для того, чтобы основной поток не завершался, пока не выполнится дочерний.
+
+    % = = = = = = = =
+    % \newpage
+    % \addcontentsline{toc}{section}{Список использованных источников}
+    % \section*{Список использованных источников}
+    \paragraph{} \textbf{Список использованных источников}:
+    \begin{enumerate}
+        \item[1.] Thread в Java: Часть I - потоки [Электронный ресурс]
+        - Режим доступа: \url{https://javarush.ru/groups/posts/2047-threadom-java-ne-isportishjh--chastjh-i---potoki}.
+        Дата~доступа:~15.02.2022.
+        \item[2.] Метод Thread.join() [Электронный ресурс]
+        - Режим доступа: \url{https://javarush.ru/groups/posts/1993-mnogopotochnostjh-chto-delajut-metodih-klassa-thread}.
+        Дата~доступа:~15.02.2022.
+        \item[3.] Как создать исполняемый jar файл в IntelliJ IDEA - YouTube [Электронный ресурс]
+        - Режим доступа: \url{https://www.youtube.com/watch?v=tA8rEz_xFrQ}.
+        Дата~доступа:~01.05.2022.
+        \item[4.] Export JavaFX 11, 15 or 17 projects into an executable jar file with IntelliJ [2022] - YouTube [Электронный ресурс]
+        - Режим доступа: \url{https://www.youtube.com/watch?v=F8ahBtXkQzU}.
+        Дата~доступа:~01.05.2022.
+    \end{enumerate}
+    \newpage
+\end{document}
