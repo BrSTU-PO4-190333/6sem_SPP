@@ -1,0 +1,165 @@
+\documentclass[12pt, a4paper, simple]{eskdtext}
+
+\usepackage{hyperref}
+\usepackage{_env/gpi_global.env}
+\usepackage{_env/gpi_report.env}
+\usepackage{_sty/gpi_lst}
+\usepackage{_sty/gpi_toc}
+\usepackage{_sty/gpi_t}
+\usepackage{_sty/gpi_p}
+\usepackage{_sty/gpi_u}
+
+% Код
+% \ESKDletter{О}{Л}{Р}
+% \def \gpiDocTypeNum {81}
+% \def \gpiDocVer {00}
+% \def \gpiCode {\ESKDtheLetterI\ESKDtheLetterII\ESKDtheLetterIII.\gpiStudentGroupName\gpiStudentGroupNum.\gpiStudentCard-0\gpiDocNum~\gpiDocTypeNum~\gpiDocVer}
+
+\def \gpiDocTopic {Отчёт лабораторной работы №\gpiDocNum}
+
+% Графа 1 (наименование изделия/документа)
+% \ESKDcolumnI {\ESKDfontII \gpiTopic \\ \gpiDocTopic}
+
+% Графа 2 (обозначение документа)
+% \ESKDsignature {\gpiCode}
+
+% Графа 9 (наименование или различительный индекс предприятия) задает команда
+% \ESKDcolumnIX {\gpiDepartment}
+
+% Графа 11 (фамилии лиц, подписывающих документ) задают команды
+% \ESKDcolumnXIfI {\gpiStudentSurname}
+% \ESKDcolumnXIfII {\gpiTeacherSurname}
+% \ESKDcolumnXIfV {\gpiTeacherSurname}
+
+\begin{document}
+    \input{_tex/gpi_rep_titlePage.tex}
+    \ESKDstyle{empty}
+    \begin{center}
+        \textbf{\gpiDocTopic}
+    \end{center}
+
+    % = = = = = = = =
+    \paragraph{} \textbf{Тема}: <<\gpiTopicRep>>
+
+    \paragraph{} \textbf{Цель}:
+    приобрести практические навыки разработки баз данных и начальной интеграции БД с кодом Java с помощью JDBC.
+
+    \paragraph{} \textbf{Что нужно сделать}:
+
+    Реализовать базу данных из не менее 5 таблиц на заданную тематику.
+    При реализации продумать типизацию полей и внешние ключи в таблицах.
+    Визуализировать разработанную БД с помощью схемы, на которой отображены все таблицы и связи между ними.
+    На языке Java с использованием JDBC реализовать подключение к БД и выполнить основные типы запросов,
+    продемонстрировать результаты преподавателю и включить тексты составленных запросов в отчет.
+    Основные типы запросов:
+    \begin{enumerate}
+        \item[1.] На выборку/на выборку с упорядочиванием (SELECT);
+        \item[2.] На добавление (INSERT INTO);
+        \item[3.] На удаление (DELETE FROM);
+        \item[4.] На модификацию (UPDATE).
+    \end{enumerate}
+    
+    Базу данные можно реализовать в любой СУБД (MySQL, PostgreSQL, SQLite и др.)
+
+    \textbf{Вариант 5}: База данных <<Сборка компьютера>>.
+
+    \paragraph{} \textbf{Проектирование базы данных}:
+
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=16cm]
+            {../sources/database/ФМ.png}
+        \caption{Логическая модель базы данных}
+    \end{figure}
+
+
+    \paragraph{} \textbf{Разработка дизайна}:
+
+    % \begin{figure}[!h]
+    %     \centering
+    %     \includegraphics[]
+    %         {_assets/ClassDiagram.png}
+    %     \caption{Диграмма классов}
+    % \end{figure}
+
+    \lstinputlisting[name=Консольное меню]
+    {_assets/menu.txt}
+
+    \paragraph{} \textbf{Исходный код}: 
+
+    \begin{enumerate}
+        \item \textbf{Main} - основной класс с логикой программы.
+        \item \textbf{RB\_Nomenclature} - справочник <<Номенклатура>> с операциями создания таблицы,
+        добавление элемента в таблицу,
+        чтение таблицы,
+        обновление элемента в таблице,
+        удаление элемента в таблице,
+        удаление таблицы.
+    \end{enumerate}
+
+    \lstinputlisting[language=java, name=src/com/company/Main.java]
+    {../sources/SPP_2sem_PO4_Galanin_lab3/src/com/company/Main.java}
+
+    \lstinputlisting[language=java, name=src/com/company/ReferenceBook_Nomenclature.java]
+    {../sources/SPP_2sem_PO4_Galanin_lab3/src/com/company/ReferenceBook_Nomenclature.java}
+
+    \lstinputlisting[name=Вывод в консоль]
+    {_assets/console.log.txt}
+
+%     \begin{lstlisting}[name=Вывод в консоль]
+%     ...                                                      |
+% \end{lstlisting}
+
+    \paragraph{} \textbf{Вывод}:
+    
+    Спроектировали базу данных из 6 таблиц.
+
+    Подключились к базе данных SQLite через код java, используя DriverManager.
+
+    Реализовали операции создания и удаления таблицы.
+
+    Реализовали операции CRUD: c - create, r - read, u - update, d - delete.
+    Создания, чтение, обновления, удаления.
+    
+    % = = = = = = = =
+    % \newpage
+    % \addcontentsline{toc}{section}{Список использованных источников}
+    % \section*{Список использованных источников}
+    \paragraph{} \textbf{Список использованных источников}
+    \begin{enumerate}
+        \item[1.] IntelliJ database connection error: java.sql.SQLException: No suitable driver found. SOLVED - YouTube [Электронный ресурс]
+        - Режим доступа: \url{https://www.youtube.com/watch?v=lks1NZCnvL8}.
+        Дата~доступа:~02.05.2022.
+        \item[2.] Releases · xerial/sqlite-jdbc [Электронный ресурс]
+        - Режим доступа: \url{https://github.com/xerial/sqlite-jdbc/releases}.
+        Дата~доступа:~02.05.2022.
+        \item[3.] JDBC CRUD Example Tutorial [Электронный ресурс]
+        - Режим доступа: \url{https://www.javaguides.net/2018/10/jdbc-crud-example-tutorial.html}.
+        Дата~доступа:~03.05.2022.
+        \item[4.] java - Проверить наличие таблицы в БД и если она не существует создать. JDBC - Stack Overflow на русском [Электронный ресурс]
+        - Режим доступа: \url{https://ru.stackoverflow.com/questions/623653/%D0%9F%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D0%B5-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B-%D0%B2-%D0%91%D0%94-%D0%B8-%D0%B5%D1%81%D0%BB%D0%B8-%D0%BE%D0%BD%D0%B0-%D0%BD%D0%B5-%D1%81%D1%83%D1%89%D0%B5%D1%81%D1%82%D0%B2%D1%83%D0%B5%D1%82-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C-jdbc}.
+        Дата~доступа:~03.05.2022.
+        \item[5.] SQL INSERT INTO Statement [Электронный ресурс]
+        - Режим доступа: \url{https://www.w3schools.com/sql/sql_insert.asp}.
+        Дата~доступа:~03.05.2022.
+        \item[6.] SQL SELECT Statement [Электронный ресурс]
+        - Режим доступа: \url{https://www.w3schools.com/sql/sql_select.asp}.
+        Дата~доступа:~03.05.2022.
+        \item[7.] SQL UPDATE Statement [Электронный ресурс]
+        - Режим доступа: \url{https://www.w3schools.com/sql/sql_update.asp}.
+        Дата~доступа:~03.05.2022.
+        \item[8.] SQL DELETE Statement [Электронный ресурс]
+        - Режим доступа: \url{https://www.w3schools.com/sql/sql_delete.asp}.
+        Дата~доступа:~03.05.2022.
+        \item[9.] SQL DROP TABLE Statement [Электронный ресурс]
+        - Режим доступа: \url{https://www.w3schools.com/sql/sql_drop_table.asp}.
+        Дата~доступа:~03.05.2022.
+        \item[10.] Как создать исполняемый jar файл в IntelliJ IDEA - YouTube [Электронный ресурс]
+        - Режим доступа: \url{https://www.youtube.com/watch?v=tA8rEz_xFrQ}.
+        Дата~доступа:~01.05.2022.
+        \item[11.] Export JavaFX 11, 15 or 17 projects into an executable jar file with IntelliJ [2022] - YouTube [Электронный ресурс]
+        - Режим доступа: \url{https://www.youtube.com/watch?v=F8ahBtXkQzU}.
+        Дата~доступа:~01.05.2022.
+    \end{enumerate}
+    \newpage
+\end{document}
