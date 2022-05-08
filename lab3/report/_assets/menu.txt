@@ -1,0 +1,8 @@
+Menu:
+1. Create element
+2. Read table
+3. Update element
+4. Delete element
+7. !!! Create database!!!
+8. !!! Drop database!!!
+0. Exit

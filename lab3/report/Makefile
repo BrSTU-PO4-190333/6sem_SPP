@@ -1,5 +1,5 @@
 build:
-	latexmk -pdf -output-directory=_build СПП_ПО-4_Галанин_лаб3.tex
+	latexmk -pdf -output-directory=_build СПП_2сем_ПО-4_Галанин_лаб3.tex
 
 clean:
 	rm -rfv ./*/*.aux
