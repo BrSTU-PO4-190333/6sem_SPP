@@ -32,8 +32,6 @@ public class RepeatTest {
 
     @Test(expected = NullPointerException.class)
     public void repeat__null_pattern() {
-        String actual = Repeat.repeat(null, 1);
-       // String expended = "";
-       // assertEquals(expended, actual);
+        Repeat.repeat(null, 1);
     }
 }
