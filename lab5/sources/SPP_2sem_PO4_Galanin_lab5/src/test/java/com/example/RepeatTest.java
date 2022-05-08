@@ -6,35 +6,32 @@ import static org.junit.Assert.assertEquals;
 
 public class RepeatTest {
     @Test
-    public void repeat__e_0() {
-        String actual = Repeat.repeat("e", 0);
-        String expended = "";
-        assertEquals(expended, actual);
-    }
+    public void repeat() {
+        String actual;
+        String expended;
 
-    @Test
-    public void repeat__e_3() {
-        String actual = Repeat.repeat("e", 3);
-        String expended = "eee";
+        actual = Repeat.repeat("e", 0);
+        expended = "";
         assertEquals(expended, actual);
-    }
 
-    @Test
-    public void repeat__ABC_2() {
-        String actual = Repeat.repeat("ABC", 2);
-        String expended = "ABCABC";
+        actual = Repeat.repeat("e", 3);
+        expended = "eee";
+        assertEquals(expended, actual);
+
+        actual = Repeat.repeat("ABC", 2);
+        expended = "ABCABC";
         assertEquals(expended, actual);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void repeat__e_minus2() {
+    public void repeat__minus_repeat() {
         String actual = Repeat.repeat("3", -2);
         String expended = "";
         assertEquals(expended, actual);
     }
 
     @Test(expected = NullPointerException.class)
-    public void repeat__null_1() {
+    public void repeat__null_pattern() {
         String actual = Repeat.repeat(null, 1);
        // String expended = "";
        // assertEquals(expended, actual);
