@@ -16,6 +16,8 @@ public class MainWindow extends Application {
             stage.setTitle("Меню");
             stage.setScene(scene);
             stage.show();
+
+            ReferenceBookNomenclatureWindowController.create_database();
         }
         catch (Exception exception) {
             System.out.println(exception);

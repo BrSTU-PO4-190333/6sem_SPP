@@ -25,7 +25,7 @@ public class ReferenceBookNomenclatureWindowController implements Initializable 
     @FXML protected TableColumn<ReferenceBookNomenclatureModel, String> table_column_name;
 
     @FXML protected void button_create_clicked() {
-        String sql = "INSERT INTO \"RM_Nomenclature\" (name) VALUES (\"" + text_field_name.getText() + "\");";
+        String sql = "INSERT INTO \"RB_Nomenclature\" (name) VALUES (\"" + text_field_name.getText() + "\");";
         Database.execute_sql_query(sql);
         button_read_clicked();
     }
@@ -43,13 +43,13 @@ public class ReferenceBookNomenclatureWindowController implements Initializable 
     }
 
     @FXML protected void button_update_clicked() {
-        String sql = "UPDATE \"RM_Nomenclature\" SET name = \"" + text_field_name.getText() + "\" WHERE id = \"" + text_field_id.getText() + "\";";
+        String sql = "UPDATE \"RB_Nomenclature\" SET name = \"" + text_field_name.getText() + "\" WHERE id = \"" + text_field_id.getText() + "\";";
         Database.execute_sql_query(sql);
         button_read_clicked();
     }
 
     @FXML protected void button_delete_clicked() {
-        String sql = "DELETE FROM \"RM_Nomenclature\" WHERE id = \"" + text_field_id.getText() + "\";";
+        String sql = "DELETE FROM \"RB_Nomenclature\" WHERE id = \"" + text_field_id.getText() + "\";";
         Database.execute_sql_query(sql);
         button_read_clicked();
     }
@@ -75,7 +75,7 @@ public class ReferenceBookNomenclatureWindowController implements Initializable 
         Connection connection = Database.get_connect_to_database();
 
         try {
-            String sql = "SELECT * FROM RM_Nomenclature;";
+            String sql = "SELECT * FROM RB_Nomenclature;";
             Statement statement = connection != null ? connection.createStatement() : null;
 
             ResultSet result_set = statement != null ? statement.executeQuery(sql) : null;
@@ -97,5 +97,10 @@ public class ReferenceBookNomenclatureWindowController implements Initializable 
         }
 
         return nomenclature_list;
+    }
+
+    protected static void create_database() {
+        String sql = "CREATE TABLE IF NOT EXISTS \"RB_Nomenclature\" (id integer NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, name text)";
+        Database.execute_sql_query(sql);
     }
 }
