@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.spp_2sem_po4_galanin_lab4/com.example.spp_2sem_po4_galanin_lab4.HelloApplication
+                                com.example.spp_2sem_po4_galanin_lab4/com.example.spp_2sem_po4_galanin_lab4.MainWindow
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
