@@ -11,7 +11,7 @@ public class MainJavaFX extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainJavaFX.class.getResource("main-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MainJavaFX.class.getResource("View-Main.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             stage.setTitle("Главное меню");
             stage.setScene(scene);

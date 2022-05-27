@@ -20,15 +20,15 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class ProducerController implements Initializable {
+public class ControllerTableProducer implements Initializable {
     @FXML
-    protected TableView<ProducerModel> TableView__ProducerModel;
+    protected TableView<ModelProducer> TableView__ProducerModel;
 
     @FXML
-    protected TableColumn<ProducerModel, Integer> TableColumn__ProducerCode;
+    protected TableColumn<ModelProducer, Integer> TableColumn__ProducerCode;
 
     @FXML
-    protected TableColumn<ProducerModel, String> TableColumn__ProducerName;
+    protected TableColumn<ModelProducer, String> TableColumn__ProducerName;
 
     @FXML
     protected TextField TextField__ProducerCode_filter;
@@ -44,8 +44,8 @@ public class ProducerController implements Initializable {
     protected void open_form(String id) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(
-                    ProducerController.class.getResource(
-                            "producer-form-view.fxml"
+                    ControllerTableProducer.class.getResource(
+                            "View-Form-Producer.fxml"
                     )
             );
 
@@ -54,7 +54,7 @@ public class ProducerController implements Initializable {
             stage.setTitle("Форма справочника \"Производители\"");
             stage.setScene(scene);
 
-            ProducerFormController controller = fxmlLoader.getController();
+            ControllerFormProducer controller = fxmlLoader.getController();
             controller.initData(id);
             fxmlLoader.setController(controller);
 
@@ -69,7 +69,7 @@ public class ProducerController implements Initializable {
     @FXML
     protected void Button__refresh_Producer_table_clicked() {
         try {
-            ObservableList<ProducerModel> list = get_list();
+            ObservableList<ModelProducer> list = get_list();
 
             TableColumn__ProducerCode.setCellValueFactory(new PropertyValueFactory<>("ProducerCode"));
             TableColumn__ProducerName.setCellValueFactory(new PropertyValueFactory<>("ProducerName"));
@@ -81,8 +81,8 @@ public class ProducerController implements Initializable {
         }
     }
 
-    protected ObservableList<ProducerModel> get_list() {
-        ObservableList<ProducerModel> list = FXCollections.observableArrayList();
+    protected ObservableList<ModelProducer> get_list() {
+        ObservableList<ModelProducer> list = FXCollections.observableArrayList();
         Connection connection = Database.get_connect_to_database();
 
         try {
@@ -101,9 +101,9 @@ public class ProducerController implements Initializable {
             if (result_set == null) {
                 return null;
             }
-            ProducerModel model;
+            ModelProducer model;
             while(result_set.next()) {
-                model = new ProducerModel(
+                model = new ModelProducer(
                         result_set.getInt("ProducerCode"),
                         result_set.getString("ProducerName")
                 );
@@ -121,10 +121,10 @@ public class ProducerController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Button__refresh_Producer_table_clicked();
 
-        TableView.TableViewSelectionModel<ProducerModel> selectionModel = TableView__ProducerModel.getSelectionModel();
-        selectionModel.selectedItemProperty().addListener(new ChangeListener<ProducerModel>() {
+        TableView.TableViewSelectionModel<ModelProducer> selectionModel = TableView__ProducerModel.getSelectionModel();
+        selectionModel.selectedItemProperty().addListener(new ChangeListener<ModelProducer>() {
             @Override
-            public void changed(ObservableValue<? extends ProducerModel> observableValue, ProducerModel oldValue, ProducerModel newValue) {
+            public void changed(ObservableValue<? extends ModelProducer> observableValue, ModelProducer oldValue, ModelProducer newValue) {
                 if (newValue != null) {
                     System.out.println("" + newValue.ProducerCode + " " + newValue.ProducerName);
                     open_form("" + newValue.ProducerCode);

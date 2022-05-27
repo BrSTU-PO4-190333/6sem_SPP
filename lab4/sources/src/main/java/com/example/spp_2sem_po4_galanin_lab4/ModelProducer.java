@@ -1,10 +1,10 @@
 package com.example.spp_2sem_po4_galanin_lab4;
 
-public class ProducerModel {
+public class ModelProducer {
     protected Integer ProducerCode;
     protected String ProducerName;
 
-    public ProducerModel(Integer ProducerCode, String ProducerName) {
+    public ModelProducer(Integer ProducerCode, String ProducerName) {
         this.ProducerCode = ProducerCode;
         this.ProducerName = ProducerName;
     }

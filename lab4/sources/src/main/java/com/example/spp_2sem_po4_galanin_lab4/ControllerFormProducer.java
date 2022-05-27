@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class ProducerFormController {
+public class ControllerFormProducer {
     @FXML
     protected TextField TextField__ProducerCode;
 
@@ -49,17 +49,17 @@ public class ProducerFormController {
 
     @FXML
     protected void Button_create_clicked() {
-        String sql = ProducerModel.get_CREATE_sql(TextField__ProducerName.getText());
+        String sql = ModelProducer.get_CREATE_sql(TextField__ProducerName.getText());
         Database.execute_sql_query(sql);
     }
 
     @FXML
     protected void Button_read_clicked() {
-        ObservableList<ReferenceBookNomenclatureModel> nomenclature_list = FXCollections.observableArrayList();
+        ObservableList<ModelProducer> nomenclature_list = FXCollections.observableArrayList();
         Connection connection = Database.get_connect_to_database();
 
         try {
-            String sql = ProducerModel.get_READ_sql(TextField__ProducerCode.getText());
+            String sql = ModelProducer.get_READ_sql(TextField__ProducerCode.getText());
             Statement statement = connection != null ? connection.createStatement() : null;
 
             ResultSet result_set = statement != null ? statement.executeQuery(sql) : null;
@@ -67,13 +67,8 @@ public class ProducerFormController {
             if (result_set == null) {
                 return;
             }
-            ReferenceBookNomenclatureModel Nomenclature;
+
             while(result_set.next()) {
-                //Nomenclature = new ReferenceBookNomenclatureModel(
-                //        result_set.getInt("id"),
-                //        result_set.getString("name")
-                //);
-                //nomenclature_list.add(Nomenclature);
                 TextField__ProducerCode.setText("" + result_set.getInt("ProducerCode"));
                 TextField__ProducerName.setText(result_set.getString("ProducerName"));
             }
@@ -85,13 +80,13 @@ public class ProducerFormController {
 
     @FXML
     protected void Button_update_clicked() {
-        String sql = ProducerModel.get_UPDATE_sql(TextField__ProducerCode.getText(), TextField__ProducerName.getText());
+        String sql = ModelProducer.get_UPDATE_sql(TextField__ProducerCode.getText(), TextField__ProducerName.getText());
         Database.execute_sql_query(sql);
     }
 
     @FXML
     protected void Button_delete_clicked() {
-        String sql = ProducerModel.get_DELETE_sql(TextField__ProducerCode.getText());
+        String sql = ModelProducer.get_DELETE_sql(TextField__ProducerCode.getText());
         Database.execute_sql_query(sql);
     }
 }

@@ -5,11 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainController {
+public class ControllerMain {
     @FXML
     protected void Button__Producer_table_clicked() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("producer-table-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ControllerMain.class.getResource("View-Table-Producer.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setTitle("Справочник Производители");
