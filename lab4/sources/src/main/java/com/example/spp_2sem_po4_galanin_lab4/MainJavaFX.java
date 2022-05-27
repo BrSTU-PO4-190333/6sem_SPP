@@ -7,17 +7,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainWindow extends Application {
+public class MainJavaFX extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource("main-window-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(MainJavaFX.class.getResource("main-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
-            stage.setTitle("Меню");
+            stage.setTitle("Главное меню");
             stage.setScene(scene);
             stage.show();
 
-            ReferenceBookNomenclatureWindowController.create_database();
+            Database.init();
         }
         catch (Exception exception) {
             System.out.println(exception);
