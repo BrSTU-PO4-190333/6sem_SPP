@@ -50,38 +50,128 @@
 
     \paragraph{} \textbf{Разработка дизайна}:
 
-    \begin{figure}[!h]
+    \begin{itemize}
+        \item Главное меню (см. рис.~\ref{fig:View-Main}).
+        \item Таблица справочника "Номенклатура" (см. рис.~\ref{fig:View-Table-Producer}).
+        \item Форма справочника "Номенклатура" (см. рис.~\ref{fig:View-Form-Producer}).
+        \item Таблица справочника "Единицы измерения".
+        \item Форма справочника "Единицы измерения".
+        \item Таблица справочника "Номенклатура".
+        \item Форма справочника "Номенклатура".
+        \item Таблица справочника "Клиенты".
+        \item Форма справочника "Клиенты".
+        \item Таблица документа "Сборка компьютера".
+        \item Форма документа "Сборка компьютера".
+    \end{itemize}
+
+    \begin{figure}[!ph]
         \centering
         \includegraphics[]
-            {_assets/RM_Nomenclature.png}
-        \caption{Справочник Номенклатура}
+            {_assets/View-Main.png}
+        \caption{Главное меню}
+        \label{fig:View-Main}
     \end{figure}
 
+    \begin{figure}[!ph]
+        \centering
+        \includegraphics[width=16cm]
+            {_assets/View-Table-Producer.png}
+        \caption{Таблица справочника "Номенклатура"}
+        \label{fig:View-Table-Producer}
+    \end{figure}
+
+    \begin{figure}[!ph]
+        \centering
+        \includegraphics[]
+            {_assets/View-Form-Producer.png}
+        \caption{Форма справочника "Номенклатура"}
+        \label{fig:View-Form-Producer}
+    \end{figure}
+
+    \newpage
     \paragraph{} \textbf{Исходный код}: 
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/.../Main.java]
+    \begin{itemize}
+        \item \textbf{Main.java} - главный класс программы
+        \item \textbf{MainJavaFX.java} - главный класс графического интерфейса
+        \item \textbf{Database.java} - класс, для работы с базой данных
+    \end{itemize}
+
+    \paragraph{} \textbf{Model - модели}:
+
+    \begin{itemize}
+        \item \textbf{ModelProducer.java} - модель справочника "Производители"
+        \item \textbf{ModelUnitMeasure.java} - модель справочника "Единицы измерения"
+        \item \textbf{ModelNomenclature.java} - модель справочника "Номенклатура"
+        \item \textbf{ModelClients.java} - модель справочника "Клиенты"
+        \item \textbf{ModelAssemblyComputer.java} - модель документа "Сборка компьютера"
+    \end{itemize}
+
+    \paragraph{} \textbf{Controller - контролеры}:
+
+    \begin{itemize}
+        \item \textbf{ControllerMain.java} - контроллер главного меню
+        \item \textbf{ControllerTableProducer.java} - контроллер таблицы справочника "Производители"
+        \item \textbf{ControllerTableUnitMeasure.java} - контроллер таблицы справочника "Единицы измерения"
+        \item \textbf{ControllerTableNomenclature.java} - контроллер таблицы справочника "Номенклатура"
+        \item \textbf{ControllerTableClients.java} - контроллер таблицы справочника "Клиенты"
+        \item \textbf{ControllerTableAssemblyComputer.java} - контроллер таблицы документа "Сборка компьютера"
+        \item[] \hspace{0pt}
+        \item \textbf{ControllerFormProducer.java} - контроллер формы справочника "Производители"
+        \item \textbf{ControllerFormUnitMeasure.java} - контроллер формы справочника "Единицы измерения"
+        \item \textbf{ControllerFormNomenclature.java} - контроллер формы справочника "Номенклатура"
+        \item \textbf{ControllerFormClients.java} - контроллер формы справочника "Клиенты"
+        \item \textbf{ControllerFormAssemblyComputer.java} - контроллер формы справочника "Сборка компьютера"
+    \end{itemize}
+
+    \paragraph{} \textbf{View - дизайн}:
+
+    \begin{itemize}
+        \item \textbf{View-Main.fxml} - дизайн главного меню
+        \item \textbf{View-Table-Producer.fxml} - дизайн таблицы справочника "Производители"
+        \item \textbf{View-Table-Unit-measure.fxml} - дизайн таблицы справочника "Единицы измерения"
+        \item \textbf{View-Table-Nomenclature.fxml} - дизайн таблицы справочника "Номенклатура"
+        \item \textbf{View-Table-Clients.fxml} - дизайн таблицы справочника "Клиенты"
+        \item \textbf{View-Table-Assembly-computer.fxml} - дизайн таблицы документа "Сборка компьютера"
+        \item[] \hspace{0pt}
+        \item \textbf{View-Form-Producer.fxml} - дизайн формы справочника "Производители"
+        \item \textbf{View-Form-Unit-measure.fxml} - дизайн формы справочника "Единицы измерения"
+        \item \textbf{View-Form-Nomenclature.fxml} - дизайн формы справочника "Номенклатура"
+        \item \textbf{View-Form-Clients.fxml} - дизайн формы справочника "Клиенты"
+        \item \textbf{View-Form-Assembly-computer.fxml} - дизайн формы документа "Сборка компьютера"
+    \end{itemize}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/../Main.java]
     {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/Main.java}
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/.../Database.java]
+    \lstinputlisting[language=java, name=src/main/java/com/example/../MainJavaFX.java]
+    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/MainJavaFX.java}
+
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/../Database.java]
     {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/Database.java}
 
-    \lstinputlisting[language=xml, name=src/main/resources/com/example/.../main-window-view.fxml]
-    {../sources/src/main/resources/com/example/spp_2sem_po4_galanin_lab4/main-window-view.fxml}
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/.../MainWindow.java]
-    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/MainWindow.java}
+    \lstinputlisting[language=xml, name=src/main/resources/com/example/../View-Main.fxml]
+    {../sources/src/main/resources/com/example/spp_2sem_po4_galanin_lab4/View-Main.fxml}
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/.../MainWindowController.java]
-    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/MainWindowController.java}
+    \lstinputlisting[language=java, name=src/main/java/com/example/../ControllerMain.java]
+    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/ControllerMain.java}
 
-    \lstinputlisting[language=xml, name=src/main/resources/com/example/...\\/reference-book-nomenclature-window-view.fxml]
-    {../sources/src/main/resources/com/example/spp_2sem_po4_galanin_lab4/reference-book-nomenclature-window-view.fxml}
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/.../ReferenceBookNomenclatureModel.java]
-    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/ReferenceBookNomenclatureModel.java}
+   
+    \lstinputlisting[language=xml, name=src/main/resources/com/example/../View-Table-Producer.fxml]
+    {../sources/src/main/resources/com/example/spp_2sem_po4_galanin_lab4/View-Table-Producer.fxml}
 
-    \lstinputlisting[language=java, name=src/main/java/com/example/...\\/ReferenceBookNomenclatureWindowController.java]
-    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/ReferenceBookNomenclatureWindowController.java}
+    \lstinputlisting[language=java, name=src/main/java/com/example/../ControllerTableProducer.java]
+    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/ControllerTableProducer.java}
+
+
+    \lstinputlisting[language=xml, name=src/main/resources/com/example/../View-Form-Producer.fxml]
+    {../sources/src/main/resources/com/example/spp_2sem_po4_galanin_lab4/View-Form-Producer.fxml}
+
+    \lstinputlisting[language=java, name=src/main/java/com/example/../ControllerFormProducer.java]
+    {../sources/src/main/java/com/example/spp_2sem_po4_galanin_lab4/ControllerFormProducer.java}
 
 %     \begin{lstlisting}[caption=Вывод в консоль]
 %  Hello, World!
@@ -92,17 +182,20 @@
 
     Создали TableView, который выводит содержание таблицы.
 
-    Создали форму, которая по нажатию кнопки "Добавить как новый",
-    создаст новый кортедж в таблице.
+    Создали форму,
+    которая по нажатию кнопки "(create, INSERT)",
+    создаст новый кортедж в таблице;
+    которая по нажатию кнопки "(read, SELECT)",
+    обновит поля в форме;
+    которая по нажатию кнопки "(update, UPDATE)",
+    обновит кортедж в базе данных;
+    которая по нажатию кнопки "(delete, DELETE)",
+    удалит кортедж в базе данных.
 
-    При выборе поля из TableView, данные переносятся в форму, а при замене полей и нажатии кнопки "Изменить текущий",
-    добавляется в базу данных обновленный кортедж.
-
-    При выборе поля из TableView, данные переносятся в форму, а при нажатии кнопки "Удалить",
-    удаляется кортедж из базы данных. 
+    При выборе поля из TableView, реализовали открытие формы.
 
     % = = = = = = = =
-    % \newpage
+    \newpage
     % \addcontentsline{toc}{section}{Список использованных источников}
     % \section*{Список использованных источников}
     \paragraph{} \textbf{Список использованных источников}:
@@ -149,6 +242,9 @@
         \item[14.] DemoCRUD-JavaFX/MainController.java at master · xemacscode/DemoCRUD-JavaFX [Электронный ресурс]
         - Режим доступа: \url{https://github.com/xemacscode/DemoCRUD-JavaFX/blob/master/src/org/xemacscode/demo/MainController.java}.
         Дата~доступа:~20.05.2022.
+        \item[15.] Passing Parameters JavaFX FXML - Stack Overflow [Электронный ресурс]
+        - Режим доступа: \url{https://stackoverflow.com/questions/14187963/passing-parameters-javafx-fxml#answer-14190310}.
+        Дата~доступа:~27.05.2022.
     \end{enumerate}
     \newpage
 \end{document}

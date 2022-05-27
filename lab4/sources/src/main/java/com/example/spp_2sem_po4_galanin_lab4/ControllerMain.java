@@ -5,18 +5,20 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainWindowController {
-    @FXML protected void button_reference_book_nomenclature_clicked() {
+public class ControllerMain {
+    @FXML
+    protected void Button__Producer_table_clicked() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(MainWindow.class.getResource("reference-book-nomenclature-window-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(ControllerMain.class.getResource("View-Table-Producer.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
-            stage.setTitle("Справочник Номенклатура");
+            stage.setTitle("Справочник Производители");
             stage.setScene(scene);
             stage.show();
         }
         catch (Exception exception) {
             System.out.println(exception);
+            exception.printStackTrace();
         }
     }
 }

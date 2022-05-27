@@ -28,4 +28,9 @@ public class Database {
             exception.printStackTrace();
         }
     }
+
+    public static void init() {
+        String sql = ModelProducer.get_CREATE_TABLE_sql();
+        Database.execute_sql_query(sql);
+    }
 }
