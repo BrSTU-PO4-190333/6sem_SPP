@@ -9,8 +9,8 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
    <children>
-      <Button mnemonicParsing="false" onAction="#Button__Producer_table_clicked" prefWidth="300.0" text="Справочник &quot;Производители&quot;" />
-      <Button disable="true" mnemonicParsing="false" prefWidth="300.0" text="Справочник &quot;Единицы измерения&quot;" />
+      <Button mnemonicParsing="false" onAction="#Button_Table_Producer_clicked" prefWidth="300.0" text="Справочник &quot;Производители&quot;" />
+      <Button mnemonicParsing="false" onAction="#Button_Table_UnitMeasure_clicked" prefWidth="300.0" text="Справочник &quot;Единицы измерения&quot;" />
       <Button disable="true" mnemonicParsing="false" prefWidth="300.0" text="Справочник &quot;Номенклатура&quot;" />
       <Button disable="true" mnemonicParsing="false" prefWidth="300.0" text="Справочник &quot;Клиенты&quot;" />
       <Button disable="true" mnemonicParsing="false" prefWidth="300.0" text="Документ &quot;Сборка компьютера&quot;" />

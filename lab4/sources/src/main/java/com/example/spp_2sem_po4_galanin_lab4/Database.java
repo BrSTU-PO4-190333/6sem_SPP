@@ -30,7 +30,12 @@ public class Database {
     }
 
     public static void init() {
-        String sql = ModelProducer.get_CREATE_TABLE_sql();
+        String sql = "";
+
+        sql = ModelProducer.get_CREATE_TABLE_sql();
+        Database.execute_sql_query(sql);
+
+        sql = ModelUnitMeasure.get_CREATE_TABLE_sql();
         Database.execute_sql_query(sql);
     }
 }
